@@ -74,7 +74,7 @@ const page = async ({ params }) => {
                 </div>
               </div>
             </div>
-            <div className="flex items-center justify-center mt-10 relative">
+            <div className="flex items-center justify-center mt-14 relative">
               <Button className="w-48 relative z-10">Add to Cart</Button>
               <Image
                 src="/products/recycle-bin.png"
