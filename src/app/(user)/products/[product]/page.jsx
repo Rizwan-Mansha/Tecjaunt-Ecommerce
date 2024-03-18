@@ -1,11 +1,11 @@
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import React from "react";
 import { cartProducts } from "@/dummyData/sliderData";
-import ProductSlider from "./components/ProductSlider";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import MultiProductSlider from "./components/MultiProductSlider";
+import MultiProductSlider from "@/components/productComponents/MultiProductSlider";
 import axios from "axios";
+import ProductPreview from "@/components/productComponents/ProductPreview";
 
 const page = async ({ params }) => {
   const productId = params.product;
@@ -24,11 +24,11 @@ const page = async ({ params }) => {
     <MaxWidthWrapper>
       <div className=" my-12 m-auto font-tec  ">
         <p className="text-3xl">Shop</p>
-        <div className="my-16   flex flex-col sm:flex-row gap-10">
-          <div className="flex-1  overflow-hidden ">
-            <ProductSlider images={product.images} />
+        <div className="my-16   flex flex-col sm:flex-row gap-10 ">
+          <div className="flex-grow  overflow-hidden ">
+            <ProductPreview images={product.images} />
           </div>
-          <div className="flex-1   flex flex-col  p-8 border-[1px] border-red-300 rounded-3xl    shadow-xl bg-gray-100 ">
+          <div className="flex w-[30vw] h-[533px] flex-col  p-8 border-[1px] border-red-300 rounded-3xl    shadow-xl bg-gray-100 ">
             <p className="font-secondary  text-primary text-2xl font-semibold">
               ${product.price}.00
             </p>
@@ -74,14 +74,14 @@ const page = async ({ params }) => {
                 </div>
               </div>
             </div>
-            <div className="flex items-center justify-center mt-16 relative">
+            <div className="flex items-center justify-center mt-10 relative">
               <Button className="w-48 relative z-10">Add to Cart</Button>
               <Image
                 src="/products/recycle-bin.png"
                 alt="ReCycle Bin"
                 width={20}
                 height={20}
-                className="absolute inset-0 right-[60%] top-3 left-auto z-20"
+                className="absolute inset-0 right-[70%] top-3 left-auto z-20"
               />
             </div>
           </div>

@@ -21,29 +21,31 @@ const Navbar = () => {
             Search
           </Button>
         </div>
-        <div className="flex items-center justify-center ">
-          <div className="flex gap-x-6">
-            <Link href="#">
-              <HomeIcon className="w-6 h-6 " />
-            </Link>
-            <Link href="#">
-              <BellIcon className="w-8 h-8 " />
-            </Link>
-            <Link href="#">
-              <ShoppingBagIcon className="w-6 h-6 " />
-            </Link>
-            <Link href="#">
-              <UserNavIcon />
-            </Link>
-          </div>
-          <div className="flex items-center justify-center gap-x-3 ml-12">
-            <Link href="/login">
-              <p className="">Login</p>
-            </Link>
-            {"|"}
-            <Link href="/register">
-              <p className="">Register</p>
-            </Link>
+        <div className="">
+          <div className="flex items-center justify-center ">
+            <div className="flex gap-x-6">
+              <Link href="#">
+                <HomeIcon className="w-6 h-6 " />
+              </Link>
+              <Link href="#">
+                <BellIcon className="w-8 h-8 " />
+              </Link>
+              <Link href="#">
+                <ShoppingBagIcon className="w-6 h-6 " />
+              </Link>
+              <Link href="#">
+                <UserNavIcon />
+              </Link>
+            </div>
+            <div className="flex items-center justify-center gap-x-3 ml-12">
+              <Link href="/login">
+                <p className="">Login</p>
+              </Link>
+              {"|"}
+              <Link href="/register">
+                <p className="">Register</p>
+              </Link>
+            </div>
           </div>
         </div>
       </div>
